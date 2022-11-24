@@ -2,6 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://lph1110.github.io/BetterTrip-server/",
   "main": "src/index.js",
   "devDependencies": {
     "dotenv": "^16.0.3",
@@ -14,6 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "find-config": "^1.0.0",
+    "gh-pages": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.5",
     "mongoose-delete": "^0.5.4",
@@ -21,6 +23,8 @@
     "path": "^0.12.7"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "nodemon --inspect=9302 src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
